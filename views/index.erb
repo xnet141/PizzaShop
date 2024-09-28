@@ -1,7 +1,7 @@
 <h2>Welcome to pizza shop!</h2>
 
 <div class="row">
-	<% @product.each do |p| %>
+	<% @products.each do |p| %>
 		<div class="col-md-3">
 			<div ><%= p.title %></div>
 			<div ><img src="<%= p.path_to_image %>" width="245rem" /></div>

@@ -12,7 +12,7 @@ end
 
 
 get '/' do
-	@product = Product.all
+	@products = Product.all
 	erb :index
 end
 
