@@ -8,3 +8,9 @@ function something()
 
 	alert(x);
 }
+
+
+function addtocart()
+{
+	alert("Hello from function");
+}
