@@ -1,4 +1,4 @@
-function something()
+function something(id)
 {	
 	var x = window.localStorage.getItem('bbb'); // x = hh['bbb']
 
@@ -12,5 +12,9 @@ function something()
 
 function addtocart(id)
 {
-	alert('Hello from function id: ' + id);
+	var key = 'product_' + id;
+
+	var x = window.localStorage.getItem(key);
+	x = x * 1 + 1;
+	window.localStorage.setItem(key, x)
 }
