@@ -10,7 +10,7 @@ function something()
 }
 
 
-function addtocart()
+function addtocart(id)
 {
-	alert("Hello from function");
+	alert('Hello from function id: ' + id);
 }
