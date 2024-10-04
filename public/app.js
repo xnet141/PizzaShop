@@ -11,6 +11,21 @@ function something(id)
 
 // ================================================
 
+
+function update_orders_input() // обновляет поле ввода тега input (скрытое) для отпрааки на сервер
+{
+	var orders = cart_get_orders();
+	$('#orders_input').val(orders);
+}
+
+
+function update_orders_button() // общее кол-во пиц на кнопке корзины
+{
+	var text = 'Cart (' + cart_get_number_of_items() + ')';
+	$('#orders_button').val(text);
+}
+
+
 function add_to_cart(id)
 {
 	var key = 'product_' + id;
@@ -18,7 +33,9 @@ function add_to_cart(id)
 	var x = window.localStorage.getItem(key);
 	x = x * 1 + 1;
 	window.localStorage.setItem(key, x);
-	alert(key + ': ' + x + '  Items in your cart: ' + cart_get_number_of_items());
+	// alert(key + ': ' + x + '  Items in your cart: ' + cart_get_number_of_items());
+	update_orders_input();
+	update_orders_button();
 }
 
 

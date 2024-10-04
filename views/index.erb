@@ -4,7 +4,7 @@
 	<% @products.each do |p| %>
 		<div class="col-md-3">
 			<div ><%= p.title %></div>
-			<div ><img src="<%= p.path_to_image %>" width="245rem" /></div>
+			<div ><img src="<%= p.path_to_image %>" width="200rem" /></div>
 			<div><%= p.description %></div>
 			<div>Size: <%= p.size %></div>
 			<div>Price: <%= p.price %></div>
@@ -21,3 +21,13 @@
 <div><button class="btn btn-success btn-sm" onclick="test()">Test</button></div>
 
 
+<script type="text/javascript">
+
+	$(function() {
+
+		update_orders_input();
+		update_orders_button();
+
+	});
+
+</script>
