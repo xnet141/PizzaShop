@@ -25,7 +25,7 @@ post '/cart' do
 	erb "Hello! #{orders_input}"
 end
 
-def parse_orders_line 
+def parse_orders_line orders_input 
     s1 = orders_input.split(/,/)
 
 	arr = []
