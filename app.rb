@@ -25,8 +25,8 @@ post '/cart' do
 	@items = parse_orders_line orders_input
 
 	@items.each do |item|
-		c = Product.find(item[0])
-		item[0] = c.title
+		
+		item[0] = Product.find(item[0])
 
 	end	
 
