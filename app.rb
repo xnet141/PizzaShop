@@ -23,8 +23,24 @@ get '/about' do
 	erb :about
 end
 
+# get '/place_order' do
+# 	#@x = params[:order]['orders_input']
+# 	erb :place_order
+# end
+
+post '/place_order' do
+	@x = params[:order]['orders_input']
+	@order = Order.create params[:order]
+	#o.save
+	erb :place_order
+end
+
+# get '/cart' do
+# 	#@orders_input = params[:orders]
+# 	erb :cart
+# end
+
 post '/cart' do
-	#orders_input = params[:orders]
 	@orders_input = params[:orders]
 	@items = parse_orders_line @orders_input
 
