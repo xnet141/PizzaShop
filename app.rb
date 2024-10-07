@@ -57,6 +57,18 @@ post '/cart' do
 	erb :cart
 end
 
+get '/admin' do
+	@orders = Order.order('created_at DESC')
+	@orders.each do |order|
+		#parse_array = parse_orders_line order.orders_input
+		order.orders_input = parse_orders_line(order.orders_input).map! { |orders_line| orders_line = Product.find(orders_line[0]).title + " = " + orders_line[1] }.join(', ')
+		#order.orders_input = parse_array.join(', ')
+	end
+
+	erb :admin
+end
+
+
 def parse_orders_line orders_input 
     s1 = orders_input.split(/,/)
 

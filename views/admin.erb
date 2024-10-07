@@ -1,0 +1,34 @@
+<h2>Admin</h2> 
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>#</th>
+		
+			<th>Name</th>
+		
+			<th>Phone</th>
+		
+			<th>Adress</th>
+		
+			<th>Orders_input</th>
+		</tr>	
+	</thead>
+
+	<tbody>
+		
+		<% @orders.each_with_index do |order, i| %>
+		<tr>	
+			<% i += 1 %>
+			<td><%= i %></td>
+			<td><%= order.name %></td>
+			<td><%= order.phone %></td>
+			<td><%= order.adress %></td>
+			<td><%= order.orders_input %></td>
+		</tr>		
+		<% end %>
+		
+	</tbody>
+</table>
+
+
