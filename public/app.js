@@ -101,7 +101,7 @@ function cancel_order()
 	window.localStorage.clear();
 	update_orders_input();
 	update_orders_button();
-	$('#cart').text('<h2>Заказ удалЁн. JS - супер!!</h2>');
+	$('#cart').text('Your cart is now empty. JS - супер!!');
 	return false;
 
 }
